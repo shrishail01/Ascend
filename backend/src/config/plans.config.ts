@@ -7,6 +7,7 @@ export interface PlanDetails {
   roadmapLimit: number;
   projectLimit: number;
   linkedinLimit: number;
+  coverLetterLimit: number;
   priorityProcessing: boolean;
   premiumTemplates: boolean;
   supportLevel: 'Email' | 'Priority' | 'Dedicated';
@@ -28,6 +29,7 @@ export const subscriptionPlans: Record<string, PlanDetails> = {
     roadmapLimit: 2,
     projectLimit: 2,
     linkedinLimit: 2,
+    coverLetterLimit: 2,
     priorityProcessing: false,
     premiumTemplates: false,
     supportLevel: 'Email',
@@ -42,6 +44,7 @@ export const subscriptionPlans: Record<string, PlanDetails> = {
     roadmapLimit: 9999,
     projectLimit: 9999,
     linkedinLimit: 9999,
+    coverLetterLimit: 9999,
     priorityProcessing: true,
     premiumTemplates: true,
     supportLevel: 'Priority',
@@ -56,6 +59,7 @@ export const subscriptionPlans: Record<string, PlanDetails> = {
     roadmapLimit: 9999,
     projectLimit: 9999,
     linkedinLimit: 9999,
+    coverLetterLimit: 9999,
     priorityProcessing: true,
     premiumTemplates: true,
     supportLevel: 'Priority',
