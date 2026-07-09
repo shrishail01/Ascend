@@ -2,6 +2,6 @@ import { z } from 'zod';
 
 export const createSubscriptionSchema = z.object({
   body: z.object({
-    plan: z.enum(['Free', 'Premium']),
+    plan: z.enum(['Free', 'Pro', 'Premium']),
   })
 });
