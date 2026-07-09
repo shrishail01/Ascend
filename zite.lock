@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-07-08T18:43:43.701Z",
+  "integrations": {
+    "ascend": {
+      "idMappings": {
+        "base": "cc4ba84ae0466dc4",
+        "tables": {
+          "Users": "tatFA5oaJtF",
+          "Resumes": "t1aXX6Yz8sa",
+          "JobApplications": "t5Boo3dg2GB",
+          "CoverLetters": "tpM6zGsTcP9",
+          "InterviewSessions": "ttMmgG3WeJs",
+          "AtsAnalyses": "tp9sDzmydty"
+        },
+        "fields": {
+          "Users": {
+            "email": "fxwvzVBjeCC",
+            "firstName": "f2AdzyvcZU7",
+            "lastName": "fiGadHDGZex",
+            "plan": "f2jef1pkSdE",
+            "linkedInUrl": "f31gDGUqxw7",
+            "currentRole": "fvFHFnKMFCw",
+            "targetRole": "fwmwH6Kmo6A",
+            "aiCreditsUsed": "f7WsGq8zzj9",
+            "createdAt": "faw2BDWRNay",
+            "resumes": "fjnYTfGxVY1",
+            "jobApplications": "fr1mA9JwtAf",
+            "coverLetters": "f7XhVPNZ64y",
+            "interviewSessions": "feM8gtL5g2K",
+            "atsAnalyses": "fvCAwAeAuJD",
+            "featureUsage": "fwgE6PwJXfp"
+          },
+          "Resumes": {
+            "title": "f4WUXqMcMFs",
+            "user": "fw8AYZZxnmj",
+            "template": "f6BhyKXwVTh",
+            "content": "fgf79faMbgZ",
+            "atsScore": "fwDBkWJLnDF",
+            "status": "f2eK5NXGwVd",
+            "createdAt": "fg5LUtN1GwZ",
+            "updatedAt": "f5L6BGmad39"
+          },
+          "JobApplications": {
+            "company": "f3dVo381NxS",
+            "user": "frbKWw8Bvis",
+            "role": "fgZJAN2E7H5",
+            "jobUrl": "ft1JzHhDEqo",
+            "status": "fhsCAbp3oQm",
+            "salary": "f9kAnR24uPb",
+            "notes": "fbrXZ7dGFni",
+            "appliedDate": "fpDBgJjPS5C",
+            "reminderDate": "f7fk1ybCHog",
+            "createdAt": "fnuQijyurAT"
+          },
+          "CoverLetters": {
+            "title": "fxr1xoiJiq4",
+            "user": "fpxaoGm24ig",
+            "company": "fueKb71tbbr",
+            "jobTitle": "fpJEtJaWnLG",
+            "content": "ffmbZWR9DZg",
+            "createdAt": "fxBkhFqVr53"
+          },
+          "InterviewSessions": {
+            "title": "fovTnCemEib",
+            "user": "famS2jzBUXo",
+            "jobTitle": "fnmipaHs5wa",
+            "company": "fbQKwSUWoEp",
+            "type": "f3hMNFhDiGA",
+            "questionsData": "fjQ1b2JMRMD",
+            "score": "fhq7F1HjN3o",
+            "feedback": "fjEnojDKw1H",
+            "createdAt": "f4wJsiugHUe"
+          },
+          "AtsAnalyses": {
+            "title": "foPpUUpysiR",
+            "user": "fasxqiWhJfs",
+            "matchScore": "fsqb3am8Abr",
+            "resumeText": "fmtMeeNM5zw",
+            "jobDescription": "f3UrYDZUnkM",
+            "analysisData": "f6e8wNoi5ku",
+            "recommendations": "fvn1ERQxJSQ",
+            "createdAt": "f2Xg8H5dEwk"
+          }
+        }
+      }
+    }
+  }
+}

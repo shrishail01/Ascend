@@ -1,0 +1,46 @@
+{
+  "accessMode": "external",
+  "userSync": {
+    "enabled": true,
+    "integrationId": "ascend",
+    "usersTableId": "tatFA5oaJtF",
+    "usersEmailFieldId": "fxwvzVBjeCC",
+    "usersFirstNameFieldId": "f2AdzyvcZU7",
+    "usersLastNameFieldId": "fiGadHDGZex"
+  },
+  "integrations": {
+    "ascend": {
+      "type": "databases",
+      "connectionId": null,
+      "base": "Ascend"
+    }
+  },
+  "envVars": {
+    "ZITE_GEMINI_API_KEY": {
+      "description": "Google AI Studio API key for Gemini AI features"
+    },
+    "ZITE_RAZORPAY_KEY_ID": {
+      "description": "Razorpay Key ID for payment processing"
+    },
+    "ZITE_RAZORPAY_KEY_SECRET": {
+      "description": "Razorpay Key Secret for server-side order creation and payment verification"
+    }
+  },
+  "authentication": {
+    "signup": "open",
+    "authenticationMethods": {
+      "magicLink": true,
+      "googleSignIn": true,
+      "sso": false
+    }
+  },
+  "seoSettings": {
+    "title": "Ascend",
+    "faviconUrl": "",
+    "description": "Your AI Career Partner for Better Tomorrow",
+    "thumbnailUrl": ""
+  },
+  "pwaSettings": {
+    "enabled": true
+  }
+}

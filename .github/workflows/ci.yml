@@ -1,0 +1,57 @@
+name: Ascend CI/CD hardener pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  backend-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repositories
+        uses: actions/checkout@v3
+
+      - name: Initialize NodeJS runtime
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: backend/package-lock.json
+
+      - name: Install backend modules
+        run: npm ci
+        working-directory: backend
+
+      - name: Validate TypeScript build
+        run: npm run build
+        working-directory: backend
+
+      - name: Run verification test suites
+        run: |
+          npx tsx src/services/ai/ai.test.ts
+          npx tsx src/services/subscription.test.ts
+          npx tsx src/services/admin.test.ts
+        working-directory: backend
+
+  frontend-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repositories
+        uses: actions/checkout@v3
+
+      - name: Initialize NodeJS runtime
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend modules
+        run: npm ci
+        working-directory: frontend
+
+      - name: Validate TypeScript and Vite compiles
+        run: npm run build
+        working-directory: frontend
