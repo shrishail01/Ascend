@@ -248,24 +248,24 @@ export default function Dashboard() {
                   <div className="space-y-1.5">
                     <div className="flex items-center justify-between text-xs font-semibold">
                       <span>Resume Builder</span>
-                      <span>{stats?.resumeCount || 0} / 3 built</span>
+                      <span>{stats?.resumeCount || 0} / 2 built</span>
                     </div>
                     <div className="w-full bg-muted dark:bg-neutral-800 h-1.5 rounded-full overflow-hidden">
                       <div 
                         className="bg-primary h-full rounded-full" 
-                        style={{ width: `${Math.min(100, ((stats?.resumeCount || 0) / 3) * 100)}%` }} 
+                        style={{ width: `${Math.min(100, ((stats?.resumeCount || 0) / 2) * 100)}%` }} 
                       />
                     </div>
                   </div>
                   <div className="space-y-1.5">
                     <div className="flex items-center justify-between text-xs font-semibold">
                       <span>AI ATS Analyzer</span>
-                      <span>{stats?.recentAnalyses?.length || 0} / 5 scans</span>
+                      <span>{stats?.recentAnalyses?.length || 0} / 2 scans</span>
                     </div>
                     <div className="w-full bg-muted dark:bg-neutral-800 h-1.5 rounded-full overflow-hidden">
                       <div 
                         className="bg-secondary h-full rounded-full" 
-                        style={{ width: `${Math.min(100, ((stats?.recentAnalyses?.length || 0) / 5) * 100)}%` }} 
+                        style={{ width: `${Math.min(100, ((stats?.recentAnalyses?.length || 0) / 2) * 100)}%` }} 
                       />
                     </div>
                   </div>
