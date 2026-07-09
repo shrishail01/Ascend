@@ -54,7 +54,7 @@ export class AIGateway {
     // 1. Feature Flag / Feature enablement check (SystemConfig)
     const sysConfig = await SystemConfig.findOne();
     if (sysConfig) {
-      const flag = sysConfig.featureFlags.find(f => f.featureName === featureName);
+      const flag = (sysConfig.featureFlags as any[]).find(f => f.featureName === featureName);
       if (flag && flag.enabled === false) {
         throw new Error(`AI_FEATURE_DISABLED: ${featureName} is currently disabled by system administrator.`);
       }
