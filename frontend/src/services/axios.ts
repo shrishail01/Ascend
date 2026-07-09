@@ -11,7 +11,7 @@ export function setAccessToken(token: string | null) {
 }
 
 const api = axios.create({
-  baseURL: '/api/v1',
+  baseURL: import.meta.env.VITE_API_URL || '/api/v1',
   timeout: 30000,
   withCredentials: true, // Send HTTP-Only refresh cookies
   headers: {
@@ -41,7 +41,8 @@ api.interceptors.response.use(
     if (error.response?.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
       try {
-        const res = await axios.post('/api/v1/auth/refresh', {}, { withCredentials: true });
+        const apiBase = import.meta.env.VITE_API_URL || '/api/v1';
+        const res = await axios.post(`${apiBase}/auth/refresh`, {}, { withCredentials: true });
         const newToken = res.data.data.accessToken;
         setAccessToken(newToken);
         originalRequest.headers.Authorization = `Bearer ${newToken}`;
