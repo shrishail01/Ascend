@@ -55,7 +55,7 @@ function SmartMatchTab({ checkAccess }: { checkAccess: (increment?: boolean) => 
   const [sopLoading, setSopLoading] = useState(false);
 
   const handleSuggest = async () => {
-    const allowed = await checkAccess(true);
+    const allowed = await checkAccess();
     if (!allowed) return;
     setLoading(true);
     try {
@@ -317,7 +317,7 @@ function CustomRoadmapTab({ checkAccess }: { checkAccess: (increment?: boolean) 
       toast.error('Please enter both current and target roles');
       return;
     }
-    const allowed = await checkAccess(true);
+    const allowed = await checkAccess();
     if (!allowed) return;
     setLoading(true);
     try {

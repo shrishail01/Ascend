@@ -24,7 +24,7 @@ export default function ProjectGenerator() {
       toast.error('Please enter your skills');
       return;
     }
-    const allowed = await checkAccess(true);
+    const allowed = await checkAccess();
     if (!allowed) return;
     setLoading(true);
     try {

@@ -23,7 +23,7 @@ export default function LinkedInReview() {
       toast.error('Please fill in at least one section');
       return;
     }
-    const allowed = await checkAccess(true);
+    const allowed = await checkAccess();
     if (!allowed) return;
     setLoading(true);
     try {

@@ -46,7 +46,7 @@ export default function AtsAnalyzer() {
   };
 
   const handleAnalyze = async () => {
-    const allowed = await checkAccess(true);
+    const allowed = await checkAccess();
     if (!allowed) return;
 
     if (tab === 'upload' && !file) {
